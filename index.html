@@ -25,6 +25,13 @@
           navigator.serviceWorker.register("ServiceWorker.js");
         }
       });
+var buildUrl = "https://your-worker-url.workers.dev/";
+var loaderUrl = buildUrl + "Build/your-loader-file.js";
+var config = {
+    dataUrl: buildUrl + "Build/your-data-file.data",
+    frameworkUrl: buildUrl + "Build/your-framework-file.js",
+    codeUrl: buildUrl + "Build/your-wasm-file.wasm"
+};
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
